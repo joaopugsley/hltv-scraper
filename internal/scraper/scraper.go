@@ -62,6 +62,7 @@ func ScrapeMatches(ctx context.Context) (map[string][]models.MatchData, error) {
 		}
 	}
 
+	chromedp.Cancel(ctx)
 	return matchesData, nil
 }
 

@@ -3,7 +3,9 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"log"
+	"os"
 	"time"
 
 	"github.com/chromedp/chromedp"
@@ -31,11 +33,15 @@ func main() {
 		log.Fatal(err)
 	}
 
-	matchesJson, err := json.Marshal(matchesData)
-
+	jsonData, err := json.Marshal(matchesData)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	log.Println(string(matchesJson))
+	err = os.WriteFile("matches.json", jsonData, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("Matches saved to matches.json")
 }
