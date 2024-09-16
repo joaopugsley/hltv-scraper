@@ -36,7 +36,7 @@ func main() {
 	options := append(c.DefaultExecAllocatorOptions[:],
 		c.Flag("disable-web-security", true),
 		c.Flag("disable-site-isolation-trials", true),
-		c.Flag("headless", true),
+		c.Flag("headless", false),
 	)
 
 	allocCtx, cancel := c.NewExecAllocator(ctx, options...)
