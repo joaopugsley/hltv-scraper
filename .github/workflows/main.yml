@@ -41,3 +41,5 @@ jobs:
           git add -f "matches.json"
           git commit -m "update matches.json"
           git push -u origin data
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
