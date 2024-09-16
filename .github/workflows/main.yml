@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - fix/github-action
   workflow_dispatch:
 
 jobs:
