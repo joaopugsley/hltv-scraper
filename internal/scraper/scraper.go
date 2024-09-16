@@ -6,8 +6,8 @@ import (
 
 	"github.com/chromedp/cdproto/cdp"
 	"github.com/chromedp/chromedp"
-	"github.com/joaopugsley/hltv/internal/models"
-	"github.com/joaopugsley/hltv/internal/utils"
+	"github.com/joaopugsley/hltv-scraper/internal/models"
+	"github.com/joaopugsley/hltv-scraper/internal/utils"
 )
 
 func ScrapeMatches(ctx context.Context) (map[string][]models.MatchData, error) {

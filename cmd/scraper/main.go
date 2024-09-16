@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/chromedp/chromedp"
-	"github.com/joaopugsley/hltv/internal/scraper"
+	"github.com/joaopugsley/hltv-scraper/internal/scraper"
 )
 
 func main() {

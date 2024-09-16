@@ -1,4 +1,4 @@
-module github.com/joaopugsley/hltv
+module github.com/joaopugsley/hltv-scraper
 
 go 1.23
 
