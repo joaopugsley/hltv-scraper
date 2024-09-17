@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -47,5 +49,4 @@ jobs:
         run: |
           git checkout data || git checkout -b data
           git add -f "matches.json"
-          git commit -m "update matches.json"
-          git push -u origin data
+          git diff --quiet && git diff --staged --quiet || (git commit -m "update data" && git push -u origin data)
